@@ -1,13 +1,40 @@
 groups:
-    - groupa
+    - bash
+    - developer
 recipes:
     mac_os_x:
+        - sudoalt::default
+        - osxdefaults::do_not_show_dashboard_as_a_space
+        - osxdefaults::dock_automatically_hide_and_show_the_dock
+        - osxdefaults::dock_minimize_to_application
+        - osxdefaults::dock_show_indicator_lights_for_open_applications_in_the_dock
+        - osxdefaults::menu_add_battery_percentage
         - osxdefaults::set_computer_name
+        - osxdefaults::speed_up_mission_control_animations
+        - osxdefaults::tap_to_click
 attributes:
+    dotfiles:
+        vimusers:
+            - root
+            - john.shelley
+        vim:
+            bundle:
+                - sleuth: git://github.com/tpope/vim-sleuth.git
+                - sensible: git://github.com/tpope/vim-sensible.git
+                - gitgutter: git://github.com/airblade/vim-gitgutter.git
+                - airline: https://github.com/bling/vim-airline
+                - syntastic: git://github.com/scrooloose/syntastic.git
+                - nerdtree: https://github.com/scrooloose/nerdtree.git
+                - vim-css-color: https://github.com/ap/vim-css-color
+    git:
+        name: John Shelley
+        email: john.shelley.p@gmail.com
     osxdefaults:
-        computername: MyComputerName
+        computername: john.shelley
     homebrewalt:
-        apps:
-            - git-extras
         cask_apps:
+            - dropbox
+            - google-drive
+            - slack
             - sourcetree
+            - spotify
