@@ -30,11 +30,15 @@ attributes:
         name: John Shelley
         email: john.shelley.p@gmail.com
     osxdefaults:
-        computername: john.shelley
+        computername: johnshelley
+    authorization:
+        sudo:
+            users:
+                - john.shelley
+            passwordless: false
+            include_sudoers_d: true
     homebrewalt:
         cask_apps:
-            - dropbox
             - google-drive
             - slack
             - sourcetree
-            - spotify
